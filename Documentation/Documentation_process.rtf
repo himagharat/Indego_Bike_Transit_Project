@@ -77,4 +77,8 @@ LESLIE FILL IN FOR WHAT WAS DONE IN CREATING PYMONGO.\
 Day 3: Got PyMongo running on everyones local machines and began to work out app.py for flask PyMongo.  Used MongoDB compass and local host to connect Jupyter Notebook file to MongoDB Compass. On Mac you do have to create instance to start MongoDB.  Can be done with Mongo - - port <port name>. \
 \
 Conversation with David.  We have to set up the app.py similar to the SQLAlchemy HW. It is best to create routes for all of the information we are looking to query. Start with duration, then bike type, pass holder count, etc. David recommended that it is best to query and do the bulk of calculations in python because it would be quicker.  JavaScript is not a quick with handling large amounts of information.  He also noted that it was best to think of the data lifecycle and to start with app.py sending data to an index.html file and then to .js file and then back to index.html.  He also mentioned to start small and then grow, so query 100 rows of information first and then move to creating variables and passing variables into .js file. \
-}
+\
+\
+Day 4 Saturday: Re-worked the Jupyter notebook for sending data to MongoDB.  Ended up making a lot of the calculations in Jupyter Notebook.  It was decided it would make it easier to query in the flask app.  We then worked on the flask app.  The flask app took some time because python did not want to return the json files.  Ultimately, had to manually parse the code with a for loop rather than return jsonify(collection).\
+\
+We cleaned up the Jupyter notebook files and deleted unnecessary documents in our repository since we pivoted.  We are now able to move on to our next set of tasks.  Creating charts with JavaScript and index.html file. }

@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask_pymongo import PyMongo
 from bson.json_util import dumps
 
@@ -20,7 +20,13 @@ def home():
         row['Q3-19'] = doc['Q3-19']
         data.append(row)
     # return dumps(list(indego))
-    return jsonify(data)
+    #return jsonify(data)
+    #print(data)
+    return render_template("index.html", data = data) 
+
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

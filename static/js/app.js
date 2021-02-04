@@ -77,3 +77,31 @@ var layout = {
 //create graph
 Plotly.newPlot('bubble',info2, layout);
 
+//comparison bar chat between standard & electric
+function buildBar(){
+  //standard bike trace
+  var trace1 = {
+    x: ['Q2-19 Standard Bike','Q3-19 Standard Bike','Q2-20 Standard Bike','Q3-20 Standard Bike'],
+    y: [data[5].Q219, data[5].Q319,data[5].Q220,data[5].Q320],
+    name: 'Standard Bike',
+    type: 'bar'
+  };
+  //electrci bike trace 
+  var trace2 = {
+    x: ['Q2-19 Electric Bike','Q3-19 Electric Bike','Q2-20 Electric Bike','Q3-20 Electric Bike'],
+    y: [data[6].Q219, data[6].Q319,data[6].Q220,data[6].Q320],
+    name: 'Electric Bike',
+    type: 'bar'
+  };
+
+  var info = [trace1, trace2];
+
+  var layout = {title:'Bike used Q2 and Q3 2019 v 2020',
+  barmode: 'group'
+  };
+
+  Plotly.newPlot('Bike Comp Bar', info, layout);
+
+
+}
+buildBar();

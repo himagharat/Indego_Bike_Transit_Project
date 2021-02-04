@@ -16,39 +16,25 @@ var trace2 = {
   name: 'Indego365',
   type: 'bar'
 };
-
+//Day Pass passholder info
 var trace3 ={
-  x: [],
-  y: [],
+  x: ['Q2-19 Day Pass','Q3-19 Day Pass','Q2-20 Day Pass','Q3-20 Day Pass'],
+  y: [data[2].Q219,data[2].Q319,data[2].Q220,data[2].Q320],
   name: 'Day Pass',
   type: 'bar'
 };
-
+//IndegoFlex Pass
 var trace4 ={
-  x: [],
-  y: [],
+  x: ['Q2-19 IndegoFlex','Q3-19 IndegoFlex','Q2-20 IndegoFlex','Q3-20 IndegoFlex'],
+  y: [data[3].Q219,data[3].Q319,data[3].Q220,data[3].Q320],
   name: 'IndegoFlex',
   type: 'bar'
-}
-var info = [
-  {
-    x: [ 'Q2-19 Day Pass',
-    'Q2-19 IndegoFlex','Q2-19 Walk-Up','Q3-19 Day Pass',
-    'Q3-19 IndegoFlex','Q2-20 Day Pass','Q2-20 IndegoFlex',
-    ,'Q3-20 Day Pass','Q3-20 IndegoFlex'],
-    y: [ data[2].Q219, data[3].Q219,data[4].Q219,
-  data[2].Q319,data[3].Q319,data[1].Q220,data[2].Q220,data[3].Q220,,
-,data[2].Q320,data[3].Q320],
-    // text:['Q2-19 Indego30', 'Q2-19 Indego365','Q2-19 Day Pass',
-    // 'Q2-19 IndegoFlex','Q2-19 Walk-Up','Q3-19 Indego30','Q3-19 Indego365','Q3-19 Day Pass',
-    // 'Q3-19 IndegoFlex','Q2-20 Indego30','Q2-20 Indego365','Q2-20 Day Pass','Q2-20 IndegoFlex',
-    // 'Q3-20 Indego30','Q3-20 Indego365','Q3-20 Day Pass','Q3-20 IndegoFlex'],
-    type: 'bar'
-  
-  }
-];
+};
+var info = [trace1, trace2, trace3, trace4];
 
-var layout = {title:'Passholder Type Q2 and Q3 2019 v 2020'};
+var layout = {title:'Passholder Type Q2 and Q3 2019 v 2020',
+barmode: 'group'
+};
 
 Plotly.newPlot('bar', layout, info);
 

@@ -41,10 +41,21 @@ function buildPlot(){
 
 buildPlot();
 
-//create Pie chart for Standard v Electric bike
+//create Pie charts for Standard v Electric bike
 
-//labels (quarters)
-var labels = ['Standard','Electrc']
-
+//labels Standard (quarters)
+var info2 = [{
+labels: ['Quarter 2 2019','Quarter 3 2019','Quarter 2 2020',
+'Quarter 3 2020'],
 //values (trips taken standard v electic)
-
+values: [data[5].Q219, data[5].Q319,data[5].Q220,data[5].Q320],
+hoverinfo: 'label + value',
+type: 'pie'
+}];
+//create layout
+var layout = {
+  title: 'Standard bike used 2019 v 2020',
+  height: 400,
+  width: 500
+};
+Plotly.newPlot('gauge',info2, layout);

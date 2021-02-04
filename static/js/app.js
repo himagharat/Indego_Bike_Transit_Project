@@ -55,11 +55,11 @@ type: 'pie'
 //create layout
 var layout = {
   title: 'Standard bike used 2019 v 2020',
-  height: 400,
-  width: 500
+  height: 300,
+  width: 400
 };
 //create graph
-Plotly.newPlot('gauge',info2, layout);
+Plotly.newPlot('standardPie',info2, layout);
 
 var info3 = [{
 labels: ['Quarter 2 2019','Quarter 3 2019','Quarter 2 2020',
@@ -71,11 +71,11 @@ type: 'pie'
 //create layout
 var layout = {
   title: 'Electric bike used 2019 v 2020',
-  height: 400,
-  width: 500
+  height: 300,
+  width: 400
 };
 //create graph
-Plotly.newPlot('bubble',info2, layout);
+Plotly.newPlot('electricPie',info2, layout);
 
 //comparison bar chat between standard & electric
 function buildBar(){

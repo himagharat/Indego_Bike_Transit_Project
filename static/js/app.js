@@ -1,51 +1,110 @@
 console.log(data);
+//brake down the types of passes into traces that way colors are different
+//include
 
-var x = data[1].Q219;
-console.log(x);
+//Indego 30 Passholder info
+var trace1 = {
+  x: ['Q2-19 Indego30','Q3-19 Indego30','Q2-20 Indego30','Q3-20 Indego30'],
+  y: [data[0].Q219,data[0].Q319,data[0].Q220,data[0].Q320],
+  name: 'Indego 30',
+  type: 'bar'
+};
+//Indego 365 passholder info 
+var trace2 = {
+  x:['Q2-19 Indego365','Q3-19 Indego365','Q2-20 Indego365','Q3-20 Indego365'],
+  y:[data[1].Q219,data[1].Q319,data[1].Q220,data[1].Q320],
+  name: 'Indego365',
+  type: 'bar'
+};
 
-var y = [];
+var trace3 ={
+  x: [],
+  y: [],
+  name: 'Day Pass',
+  type: 'bar'
+};
 
-for (var key in x){
-  y.push(key);
-  console.log(y);
+var trace4 ={
+  x: [],
+  y: [],
+  name: 'IndegoFlex',
+  type: 'bar'
 }
-var horizontalBarChartData ={
-  labels:[],
-  datasets:[{
-    data: data[0].Q219
-    // data[1].Q219,
-    // data[2].Q219,
-  }] 
-};
+var info = [
+  {
+    x: [ 'Q2-19 Day Pass',
+    'Q2-19 IndegoFlex','Q2-19 Walk-Up','Q3-19 Day Pass',
+    'Q3-19 IndegoFlex','Q2-20 Day Pass','Q2-20 IndegoFlex',
+    ,'Q3-20 Day Pass','Q3-20 IndegoFlex'],
+    y: [ data[2].Q219, data[3].Q219,data[4].Q219,
+  data[2].Q319,data[3].Q319,data[1].Q220,data[2].Q220,data[3].Q220,,
+,data[2].Q320,data[3].Q320],
+    // text:['Q2-19 Indego30', 'Q2-19 Indego365','Q2-19 Day Pass',
+    // 'Q2-19 IndegoFlex','Q2-19 Walk-Up','Q3-19 Indego30','Q3-19 Indego365','Q3-19 Day Pass',
+    // 'Q3-19 IndegoFlex','Q2-20 Indego30','Q2-20 Indego365','Q2-20 Day Pass','Q2-20 IndegoFlex',
+    // 'Q3-20 Indego30','Q3-20 Indego365','Q3-20 Day Pass','Q3-20 IndegoFlex'],
+    type: 'bar'
+  
+  }
+];
 
-window.onload = function() {
-  var ctx = document.getElementById('bar').getContext('2d');
-  window.myHorizontalBar = new Chart(ctx, {
-    type: 'bar',
-    data: horizontalBarChartData,
-    options: {
-      indexAxis: 'y',
-      // Elements options apply to all of the options unless overridden in a dataset
-      // In this case, we are setting the border of each horizontal bar to be 2px wide
-      elements: {
-        bar: {
-          borderWidth: 2,
-        }
-      },
-      responsive: true,
-      plugins: {
-        legend: {
-          position: 'right',
-        },
-        title: {
-          display: true,
-          text: 'Chart.js Horizontal Bar Chart'
-        }
-      }
-    }
-  });
+var layout = {title:'Passholder Type Q2 and Q3 2019 v 2020'};
 
-};
+Plotly.newPlot('bar', layout, info);
+
+
+
+// var json = JSON.parse(data);
+//     console.log(json);
+
+// var labels = json.map(function(data){
+//   return data.Q219;
+// });
+// console.log(labels);
+
+// var y = [];
+
+// for (var key in x){
+//   y.push(key);
+//   console.log(y);
+// }
+// var horizontalBarChartData ={
+//   labels:[],
+//   datasets:[{
+//     data: data[0].Q219,
+//     data[1].Q219,
+//     data[2].219,
+//   }] 
+// };
+
+// window.onload = function() {
+//   var ctx = document.getElementById('bar').getContext('2d');
+//   window.myHorizontalBar = new Chart(ctx, {
+//     type: 'bar',
+//     data: horizontalBarChartData,
+//     options: {
+//       indexAxis: 'y',
+//       // Elements options apply to all of the options unless overridden in a dataset
+//       // In this case, we are setting the border of each horizontal bar to be 2px wide
+//       elements: {
+//         bar: {
+//           borderWidth: 2,
+//         }
+//       },
+//       responsive: true,
+//       plugins: {
+//         legend: {
+//           position: 'right',
+//         },
+//         title: {
+//           display: true,
+//           text: 'Chart.js Horizontal Bar Chart'
+//         }
+//       }
+//     }
+//   });
+
+// };
 
 // window.onload = function() {
 // var chart = new CanvasJS.Chart("bar",{

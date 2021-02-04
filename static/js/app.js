@@ -58,4 +58,22 @@ var layout = {
   height: 400,
   width: 500
 };
+//create graph
 Plotly.newPlot('gauge',info2, layout);
+
+var info3 = [{
+labels: ['Quarter 2 2019','Quarter 3 2019','Quarter 2 2020',
+'Quarter 3 2020'],
+values: [data[6].Q219, data[6].Q319,data[6].Q220,data[6].Q320],
+hoverinfo: 'label + value',
+type: 'pie'
+}];
+//create layout
+var layout = {
+  title: 'Electric bike used 2019 v 2020',
+  height: 400,
+  width: 500
+};
+//create graph
+Plotly.newPlot('bubble',info2, layout);
+

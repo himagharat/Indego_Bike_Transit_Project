@@ -13,11 +13,11 @@ def home():
 
     for doc in list(indego):
         row = {}
-        row['index'] = doc['index']
-        row['Q2-19'] = doc['Q2-19']
-        row['Q2-20'] = doc['Q2-20']
-        row['Q3-20'] = doc['Q3-20']
-        row['Q3-19'] = doc['Q3-19']
+        row['labels'] = doc['labels']
+        row['Q219'] = doc['Q219']
+        row['Q220'] = doc['Q220']
+        row['Q320'] = doc['Q320']
+        row['Q319'] = doc['Q319']
         data.append(row)
     # return dumps(list(indego))
     #return jsonify(data)

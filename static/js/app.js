@@ -33,7 +33,9 @@ function buildPlot(){
   var info = [trace1, trace2, trace3, trace4];
 
   var layout = {title:'Passholder Type Q2 and Q3 2019 v 2020',
-  barmode: 'group'
+  barmode: 'group',
+  width: 600,
+  height: 500
   };
 
   Plotly.newPlot('bar', info, layout);

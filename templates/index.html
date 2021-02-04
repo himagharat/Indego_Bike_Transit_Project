@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Bike Share System</title>
+  <h1>Bike Share System</h1>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
@@ -29,38 +29,34 @@
       <h2></h2>
       <p>Indego Bike Analysis</p>
     </div>
-    <div class="container">
-      <div class="row margin-top-50">
-        <div class="row">
-          <div class="col-md-2">
-
-            <div class="well">
-              <h5>Quarterly trips.:</h5>
-              <select id="selDataset" onchange="optionChanged(this.value) + {{info}}"></select>
-              
-            </div>
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">Trips Summary Info</h3>
-              </div>
-              <div id="sample-metadata" class="panel-body"></div>
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div id="bar"></div>
-          </div>
-          <div class="col-md-5">
-            <div id="standardPie"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-5">
-            <div id="electricPie"></div>
-          </div>
-        </div>
+    <div class= "container content">
+      <div class = "row">
+        <div class = "col-md-2"></div>
+        <h2> Passholder Comparision</h2>
+          <div id="bar"></div>
       </div>
-    
-
+    </div>
+    <div class= "container content">
+      <div class = "row">
+        <div class = "col-md-2"></div>
+        <h2> Bike Usage</h2>
+          <div id="Bike Comp Bar"></div>
+      </div>
+    </div>
+    <div class = "container content">
+      <div class = 'row'> 
+        <div class = "col-md-2"></div>
+        <h2>Standard Bike Usage</h2>
+        <div id="standardPie"></div>
+      </div>
+    </div>
+    <div class = "container content">
+      <div class = 'column'>
+        <div class = "col-md-2"></div>
+        <h2>Electric Bike Usage</h2>
+        <div id="electricPie"></div>
+      </div>
+    </div>
     <footer class="footer">
       <span class="bottom">Bike Share System</span>
     </footer>

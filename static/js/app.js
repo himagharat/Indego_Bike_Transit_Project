@@ -113,29 +113,41 @@ buildBar();
 console.log(data[8].Q319);
 
 function buildLine(){
-  var trace1 = {
+  var line1 = {
     x: ['Q2-19','Q3-19','Q2-20','Q3-20'],
-    y: [data[8].Q219,data[8].Q319,data[8].Q220,data[8].Q320],
-    name: 'Total Trips',
-    mode: 'lines+markers'
+    y: [data[8].Q219, data[8].Q319, data[8].Q220, data[8].Q320],
+    // name: 'lines',
+    mode: 'lines',
+    line: {
+      width: 3,
+      color: 'red'
+    }
   };
 
-  var trace2 = {
+  var line2 = {
     x: ['Q2-19','Q3-19','Q2-20','Q3-20'],
     y: [data[9].Q219,data[9].Q319,data[9].Q220,data[9].Q320],
-    name: 'One Way Trips',
-    mode: 'lines+markers'
+    // name: 'lines',
+    mode: 'lines',
+    line: {
+      width: 3,
+      color: 'blue'
+    }
   };
 
-  var trace3 = {
+  var line3 = {
     x: ['Q2-19','Q3-19','Q2-20','Q3-20'],
     y: [data[10].Q219,data[10].Q319,data[10].Q220,data[10].Q320],
-    name: 'Round Trips',
-    mode: 'lines+markers'
+    // name: 'lines',
+    mode: 'line',
+    line: {
+      width: 3,
+      color: 'pink'
+    }
   };
   
-  var data = {trace1, trace2, trace3 };
+  var info = {line1, line2, line3 };
 
-  Plotly.newPlot("total trips",data);
+  Plotly.newPlot("total trips",info);
 }
 buildLine();

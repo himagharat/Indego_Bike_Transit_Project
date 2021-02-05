@@ -46,57 +46,66 @@ buildPlot();
 //create Pie charts for Standard v Electric bike
 
 //labels Standard (quarters)
-var info2 = [{
-labels: ['Quarter 2 2019','Quarter 3 2019','Quarter 2 2020',
-'Quarter 3 2020'],
+function buildPie1(){
+  var trace5 = [{
 //values (trips taken standard v electic)
-values: [data[5].Q219, data[5].Q319,data[5].Q220,data[5].Q320],
-hoverinfo: 'label + value',
-type: 'pie'
-}];
+  values: [data[5].Q219, data[5].Q319,data[5].Q220,data[5].Q320],
+  labels: ['Quarter 2 2019','Quarter 3 2019','Quarter 2 2020',
+  'Quarter 3 2020'],
+  hoverinfo: 'label + value',
+  type: 'pie'
+  }];
 //create layout
-var layout = {
+  var layout = {
   // title: 'Standard bike used 2019 v 2020',
-  height: 300,
-  width: 350
-};
-//create graph
-Plotly.newPlot('standardPie',info2, layout);
+    height: 300,
+    width: 350
+  };
 
-var info3 = [{
-labels: ['Quarter 2 2019','Quarter 3 2019','Quarter 2 2020',
-'Quarter 3 2020'],
-values: [data[6].Q219, data[6].Q319,data[6].Q220,data[6].Q320],
-hoverinfo: 'label + value',
-type: 'pie'
-}];
-//create layout
-var layout = {
-  // title: 'Electric bike used 2019 v 2020',
-  height: 300,
-  width: 350
-};
+  // var info1 = [trace5];
 //create graph
-Plotly.newPlot('electricPie',info2, layout);
+  Plotly.newPlot("standardPie",trace5, layout);
+}
+buildPie1();
+
+function buildPie2(){
+  var trace6 = [{
+  values: [data[6].Q219, data[6].Q319,data[6].Q220,data[6].Q320],
+  labels: ['Quarter 2 2019','Quarter 3 2019','Quarter 2 2020',
+  'Quarter 3 2020'],
+  hoverinfo: 'label + value',
+  type: 'pie'
+  }];
+//create layout
+  var layout = {
+  // title: 'Electric bike used 2019 v 2020',
+    height: 300,
+    width: 350
+  };
+  // var info2 = [trace6];
+//create graph
+  Plotly.newPlot("electricPie",trace6, layout);
+}
+buildPie2();
 
 //comparison bar chat between standard & electric
 function buildBar(){
   //standard bike trace
-  var trace1 = {
+  var trace7 = {
     x: ['Q2-19 Standard Bike','Q3-19 Standard Bike','Q2-20 Standard Bike','Q3-20 Standard Bike'],
     y: [data[5].Q219, data[5].Q319,data[5].Q220,data[5].Q320],
     name: 'Standard Bike',
     type: 'bar'
   };
   //electrci bike trace 
-  var trace2 = {
+  var trace8 = {
     x: ['Q2-19 Electric Bike','Q3-19 Electric Bike','Q2-20 Electric Bike','Q3-20 Electric Bike'],
     y: [data[6].Q219, data[6].Q319,data[6].Q220,data[6].Q320],
     name: 'Electric Bike',
     type: 'bar'
   };
 
-  var info = [trace1, trace2];
+  var info3 = [trace7, trace8];
 
   var layout = {title:'Bike used Q2 and Q3 2019 v 2020',
   barmode: 'group',
@@ -104,16 +113,14 @@ function buildBar(){
   height: 500
   };
 
-  Plotly.newPlot('Bike Comp Bar', info, layout);
-
-
+  Plotly.newPlot('Bike Comp Bar', info3, layout);
 }
 buildBar();
 
 console.log(data[8].Q319);
 
 function buildLine(){
-  var trace1 = {
+  var trace9 = {
     x: ['Q2-19','Q3-19','Q2-20','Q3-20'],
     y: [data[8].Q219, data[8].Q319, data[8].Q220, data[8].Q320],
     type: 'bar'
@@ -125,7 +132,7 @@ function buildLine(){
     // }
   };
 
-  var trace2 = {
+  var trace10 = {
     x: ['Q2-19','Q3-19','Q2-20','Q3-20'],
     y: [data[9].Q219,data[9].Q319,data[9].Q220,data[9].Q320],
     type: 'bar'
@@ -137,7 +144,7 @@ function buildLine(){
     // }
   };
 
-  var trace3 = {
+  var trace11 = {
     x: ['Q2-19','Q3-19','Q2-20','Q3-20'],
     y: [data[10].Q219,data[10].Q319,data[10].Q220,data[10].Q320],
     type: 'bar'
@@ -149,8 +156,8 @@ function buildLine(){
     // }
   };
   
-  var info2 = {trace1, trace2, trace3 };
+  var info4 = {trace9, trace10, trace11};
 
-  Plotly.newPlot("total trips", info2);
+  Plotly.newPlot("total trips", info4);
 }
 buildLine();

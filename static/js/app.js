@@ -110,10 +110,10 @@ function buildBar(){
 }
 buildBar();
 
-console.log(data[8].Q219);
+console.log(data[8].Q319);
 
 function buildLine(){
-  var trace1 ={
+  var trace1 = {
     x: ['Q2-19','Q3-19','Q2-20','Q3-20'],
     y: [data[8].Q219,data[8].Q319,data[8].Q220,data[8].Q320],
     name: 'Total Trips',

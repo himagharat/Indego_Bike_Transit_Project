@@ -22,7 +22,6 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          
         </div>
       </div>
     </nav>
@@ -33,29 +32,32 @@
     </div>
     <div class= "container">
       <div class ="column">
-        <div class = "col-md-2">
-          <h3>Total Trips and Type</h3>
-          <div id = "total trips"></div>
-        </div>
-        <div class = ".col-md-2">Column left</div>
+        <div class = "col-md-2"></div>
         <h3> Passholder Comparision</h3>
         <div id="bar"></div>
-        <div class = ".col-md-2">Column left</div>
+        <div class = "col-md-2"></div>
         <h3> Bike Usage</h3>
         <div id="Bike Comp Bar"></div>
       </div>
     </div>
     <div class = "container">
       <div class ="column">
-        <div class = "col col-2">Column left</div>
+        <div class = "col col-2"></div>
         <h3>Standard Bike Usage 2019 vs. 2020 (Q2&Q3)</h3>
         <div id="standardPie"></div>
       </div>
       <div class = "column">
-        <div class = "col col-2">Column right </div>
+        <div class = "col col-2"> </div>
         <h3>Electric Bike Usage 2019 vs. 2020 (Q2&Q3)</h3>
         <div id="electricPie"></div>
       </div>
+  </div>
+  <div class = "container">
+    <div class = "column">
+      <div class = "col-md-2"></div>
+      <h3>Total Trips and Type</h3>
+      <div id = "total trips"></div>
+    </div>
   </div>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script> var data = {{ data|tojson }}; 

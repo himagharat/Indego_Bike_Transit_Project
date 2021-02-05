@@ -141,9 +141,12 @@ function buildBar2(){
     type: 'bar'
   };
   
-  var layout1 = {barmode: 'group'};
+  var layout1 = {barmode: 'group',
+  width: 800,
+  height: 600
+  };
 
-  var info4 = {trace9, trace10, trace11};
+  var info4 = [trace9, trace10, trace11];
   
   Plotly.newPlot("total trips", info4, layout1);
 }

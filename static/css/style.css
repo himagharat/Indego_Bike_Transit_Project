@@ -10,13 +10,26 @@ body {
   margin: 0;
 }
 
-/* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
+.column {
+  float: left;
+  width: 50%;
+  padding: 25px;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page
 .wrapper {
   position: relative;
   min-height: 100%;
   padding-bottom: 130px;
   overflow: auto;
-}
+} */
 
 /* The footer is positioned at the bottom of the page */
 .footer {
@@ -43,19 +56,8 @@ body {
   margin: 0;
 }
 
-/* This CSS styles the ufo icon in the navbar */
-.nav-ufo {
-  position: absolute;
-  bottom: 5px;
-  left: 150px;
-  width: 35px;
-  color: white;
-}
 
-/* Adding styles to the aside and filter form */
-.ufo-form {
-  margin-top: 50px;
-}
+
 
 .filters .panel-body {
   padding: 0;
@@ -192,7 +194,7 @@ select {
   }
 }
 
-/* keyframe animations which will be used to animate the title */
+/* keyframe animations which will be used to animate the title
 @keyframes title {
   from {
     opacity: 0;
@@ -223,4 +225,4 @@ select {
   to {
     opacity: 1;
   }
-}
+} */

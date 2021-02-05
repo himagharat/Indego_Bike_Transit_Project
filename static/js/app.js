@@ -34,8 +34,8 @@ function buildPlot(){
 
   var layout = {title:'Passholder Type Q2 and Q3 2019 v 2020',
   barmode: 'group',
-  width: 600,
-  height: 500
+  width: 800,
+  height: 600
   };
 
   Plotly.newPlot('bar', info, layout);
@@ -99,7 +99,9 @@ function buildBar(){
   var info = [trace1, trace2];
 
   var layout = {title:'Bike used Q2 and Q3 2019 v 2020',
-  barmode: 'group'
+  barmode: 'group',
+  width: 600,
+  height: 500
   };
 
   Plotly.newPlot('Bike Comp Bar', info, layout);

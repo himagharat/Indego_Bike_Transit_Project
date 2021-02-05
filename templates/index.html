@@ -31,57 +31,32 @@
       <h2></h2>
       <p>Indego Bike Analysis</p>
     </div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
-          aria-haspopup="true" aria-expanded="false">
-            Plots
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="Max_temp.html">Maximum Temperature</a>
-            <a class="dropdown-item" href="Humidity.html">Humidity</a>
-            <a class="dropdown-item" href="Cloudiness.html">Cloudiness</a>
-            <a class="dropdown-item" href="Wind_speed.html">Wind Speed</a>
-          </div>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="Comparison.html">Comparison</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="Data.html">Data</a>
-          </li>
-      </ul>
-  </div>
-</div>
-</nav>
     <div class= "container">
       <div class ="column">
+        <div class = "col-md-2">
+          <h3>Total Trips and Type</h3>
+          <div id = "total trips"></div>
+        </div>
         <div class = ".col-md-2">Column left</div>
-        <h2> Passholder Comparision</h2>
+        <h3> Passholder Comparision</h3>
         <div id="bar"></div>
         <div class = ".col-md-2">Column left</div>
-        <h2> Bike Usage</h2>
+        <h3> Bike Usage</h3>
         <div id="Bike Comp Bar"></div>
       </div>
     </div>
     <div class = "container">
       <div class ="column">
         <div class = "col col-2">Column left</div>
-        <h2>Standard Bike Usage</h2>
+        <h3>Standard Bike Usage 2019 vs. 2020 (Q2&Q3)</h3>
         <div id="standardPie"></div>
       </div>
       <div class = "column">
         <div class = "col col-2">Column right </div>
-        <h2>Electric Bike Usage</h2>
+        <h3>Electric Bike Usage 2019 vs. 2020 (Q2&Q3)</h3>
         <div id="electricPie"></div>
       </div>
-    <!-- <footer class="footer">
-      <span class="bottom">Indego Bike Analysis</span>
-    </footer> -->
   </div>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script> -->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script> var data = {{ data|tojson }}; 
   console.log(data);

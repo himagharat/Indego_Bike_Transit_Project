@@ -56,9 +56,9 @@ type: 'pie'
 }];
 //create layout
 var layout = {
-  title: 'Standard bike used 2019 v 2020',
+  // title: 'Standard bike used 2019 v 2020',
   height: 300,
-  width: 400
+  width: 350
 };
 //create graph
 Plotly.newPlot('standardPie',info2, layout);
@@ -72,9 +72,9 @@ type: 'pie'
 }];
 //create layout
 var layout = {
-  title: 'Electric bike used 2019 v 2020',
+  // title: 'Electric bike used 2019 v 2020',
   height: 300,
-  width: 400
+  width: 350
 };
 //create graph
 Plotly.newPlot('electricPie',info2, layout);

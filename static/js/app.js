@@ -109,3 +109,33 @@ function buildBar(){
 
 }
 buildBar();
+
+console.log(data[8].Q219);
+
+function buildLine(){
+  var trace1 ={
+    x: ['Q2-19','Q3-19','Q2-20','Q3-20'],
+    y: [data[8].Q219,data[8].Q319,data[8].Q220,data[8].Q320],
+    name: 'Total Trips',
+    mode: 'lines+markers'
+  };
+
+  var trace2 = {
+    x: ['Q2-19','Q3-19','Q2-20','Q3-20'],
+    y: [data[9].Q219,data[9].Q319,data[9].Q220,data[9].Q320],
+    name: 'One Way Trips',
+    mode: 'lines+markers'
+  };
+
+  var trace3 = {
+    x: ['Q2-19','Q3-19','Q2-20','Q3-20'],
+    y: [data[10].Q219,data[10].Q319,data[10].Q220,data[10].Q320],
+    name: 'Round Trips',
+    mode: 'lines+markers'
+  };
+  
+  var data = {trace1, trace2, trace3 };
+
+  Plotly.newPlot("total trips",data);
+}
+buildLine();

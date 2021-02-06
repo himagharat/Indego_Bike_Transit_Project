@@ -9,6 +9,9 @@ body {
   padding: 0;
   margin: 0;
 }
+.container h3 {
+  color: #1b3146;
+}
 
 .column {
   float: left ;
@@ -16,7 +19,13 @@ body {
   padding: 5px;
 
 }
-
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 100px;
+  overflow: auto;
+  background-color: #ffffff;
+}
 .row:after {
   content: "";
   display: table;
